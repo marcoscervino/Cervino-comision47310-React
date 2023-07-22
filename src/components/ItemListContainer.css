@@ -1,0 +1,12 @@
+.mainPage{
+    background-color: black;
+    color:azure;
+    width: 100%;
+    height: max-content;
+    height: 800px;
+}
+
+.mainP{
+    font-family: sans-serif;
+    font-size: 48px;
+}
