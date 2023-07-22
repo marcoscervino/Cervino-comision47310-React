@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <NavBar/>
-      <ItemListContainer greeting="Bienvenidos!! a la mejor tienda de bebidas"/>
+      <ItemListContainer greeting="Bienvenidos!!! a la mejor tienda de bebidas"/>
     </>
   )
 }
