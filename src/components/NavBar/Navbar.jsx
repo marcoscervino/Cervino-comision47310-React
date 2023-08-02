@@ -1,6 +1,6 @@
-import mainLogo from '../assets/logo/best-bar-logo.png';
-import searchIcon from '../assets/icons/search-icon.png';
-import { CartWidget } from "./CartWidget";
+import mainLogo from '../../assets/logo/best-bar-logo.png';
+import searchIcon from '../../assets/icons/search-icon.png';
+import { CartWidget } from "../CartWidget/CartWidget.jsx";
 
 export const NavBar = () => {
 

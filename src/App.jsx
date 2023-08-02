@@ -1,18 +1,24 @@
 import './App.css'
-import './components/navbar.css'
-import './components/ItemListContainer.css'
-import './components/CartWidget.jsx'
-import './components/navbar.jsx'
-import './components/ItemListContainer.jsx'
+import './components/NavBar/NavBar.css'
+import './components/ItemListContainer/ItemListContainer.css'
+import './components/CartWidget/CartWidget.css'
+import './components/CartWidget/CartWidget.jsx'
+import './components/NavBar/Navbar.jsx'
+import './components/ItemListContainer/ItemListContainer.jsx'
+import './components/PromosMsj/PromosMsj.jsx'
 
-import { NavBar } from './components/navbar.jsx'
-import { ItemListContainer } from './components/ItemListContainer.jsx'
+import { NavBar } from './components/NavBar/Navbar.jsx'
+import { ItemListContainer } from './components/ItemListContainer/ItemListContainer.jsx'
+import { PromosMsj } from './components/PromosMsj/PromosMsj.jsx'
+import { ItemDetailContaier } from './components/ItemDetailContainer/ItemDetailContainer'
 function App() {
 
   return (
     <>
       <NavBar/>
-      <ItemListContainer greeting="Bienvenidos!"/>
+      <PromosMsj/>
+      {/* <ItemListContainer/> */}
+      <ItemDetailContaier/>
     </>
   )
 }

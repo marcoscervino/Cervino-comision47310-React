@@ -1,4 +1,4 @@
-import cartLogo from "../assets/icons/cart-regular.png";
+import cartLogo from "../../assets/icons/cart-regular.png";
 
 export const CartWidget = () => {
     return(
