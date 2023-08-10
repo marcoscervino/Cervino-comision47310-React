@@ -16,9 +16,10 @@ function App() {
   return (
     <>
       <NavBar/>
+      <main>
       <PromosMsj/>
-      {/* <ItemListContainer/> */}
-      <ItemDetailContaier/>
+      <ItemListContainer/>
+      </main>
     </>
   )
 }
