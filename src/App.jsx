@@ -10,7 +10,6 @@ import './components/PromosMsj/PromosMsj.jsx'
 import { NavBar } from './components/NavBar/Navbar.jsx'
 import { ItemListContainer } from './components/ItemListContainer/ItemListContainer.jsx'
 import { PromosMsj } from './components/PromosMsj/PromosMsj.jsx'
-import { ItemDetailContanier } from './components/ItemDetailContainer/ItemDetailContainer'
 function App() {
 
   return (

@@ -1,6 +1,7 @@
 import mainLogo from '../../assets/logo/best-bar-logo.png';
 import searchIcon from '../../assets/icons/search-icon.png';
 import { CartWidget } from "../CartWidget/CartWidget.jsx";
+import { Link } from "react-router-dom";
 
 export const NavBar = () => {
 
@@ -25,11 +26,11 @@ export const NavBar = () => {
                   Nuestros productos
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a className="dropdown-item" id="filtroCervezas" href="#">Cervezas</a></li>
-                  <li><a className="dropdown-item" id="filtroGaseosas" href="#">Gaseosas</a></li>
-                  <li><a className="dropdown-item" id="filtroGines" href="#">Gines</a></li>
-                  <li><a className="dropdown-item" id="filtroVodkas" href="#">Vodkas</a></li>
-                  <li><a className="dropdown-item" id="filtroVinos" href="#">Vinos</a></li>
+                  <li> <Link to={`/categoria/cerveza`}><a className="dropdown-item"  href="#">Cervezas</a></Link> </li>
+                  <li><Link to={`/categoria/gaseosa`}><a className="dropdown-item"  href="#">Gaseosas</a></Link></li>
+                  <li><Link to={`/categoria/gin`}><a className="dropdown-item"  href="#">Gines</a></Link></li>
+                  <li><Link to={`/categoria/vodka`}><a className="dropdown-item"  href="#">Vodkas</a></Link></li>
+                  <li><Link to={`/categoria/vino`}><a className="dropdown-item"  href="#">Vinos</a></Link></li>
                 </ul>
               </li>
             </ul>

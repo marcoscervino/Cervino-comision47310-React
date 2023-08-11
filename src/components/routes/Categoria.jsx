@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
-import { ItemCount } from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
+import { ItemCount } from "../ItemCount/ItemCount";
+import { useParams } from "react-router-dom";
+import { NavBar } from "../NavBar/Navbar";
 
-const simulateProductLoad = () => {
+const simulateProductLoad = (categoriaSeleccionada) => {
   return new Promise((resolve) => {
     setTimeout(() => {
       const productos = [
@@ -187,29 +189,37 @@ const simulateProductLoad = () => {
             foto: "https://i.postimg.cc/N0Y3xPtt/trumpeter-malbec-750ml-v2.png",
           }
         ];
-      resolve(productos);
-    }, 2000);
+        if (categoriaSeleccionada) {
+          const productosFiltrados = productos.filter(item => item.categoria === categoriaSeleccionada);
+          resolve(productosFiltrados);
+        } else {
+          resolve(productos);
+        }
+      }, 500);
   });
 };
 
-export const ItemList = () => {
+export const Categoria = () => {
   const [productos, setProductos] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  
+  const { categoria } = useParams();
 
   useEffect(() => {
-    simulateProductLoad().then((productos) => {
-      setProductos(productos);
+    setIsLoading(true);
+    simulateProductLoad(categoria).then((productosFiltrados) => {
+      setProductos(productosFiltrados);
       setIsLoading(false);
     });
-  }, []);
+  }, [categoria]);
 
   return (
     <>
+    <NavBar/>
       {isLoading && <h3> Cargando... </h3>}
 
       {!isLoading &&
         productos.map((producto) => (
+          <section className='row justify-content-center' >
           <div className="card mt-3 mb-3 ms-2 mx-2 border-dark text-center col-md-2" key={producto.id}>
             <img className="card-img-top" src={producto.foto}></img>
             <div className="card-body">
@@ -219,6 +229,7 @@ export const ItemList = () => {
             <ItemCount/>
             </div>
           </div>
+          </section>
         ))}
     </>
   );
