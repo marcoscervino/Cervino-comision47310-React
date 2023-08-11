@@ -5,3 +5,5 @@ export function ItemDetail ({nombre, precio, foto}) {
         <p>{precio}</p>
     </article>
 }
+
+//1:27 link productdetail clase 9

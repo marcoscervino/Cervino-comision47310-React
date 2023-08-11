@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ItemCount } from "../ItemCount/ItemCount";
+import { Link } from "react-router-dom";
 
 const simulateProductLoad = () => {
   return new Promise((resolve) => {
@@ -211,10 +212,9 @@ export const ItemList = () => {
           <div className="card mt-3 mb-3 ms-2 mx-2 border-dark text-center col-md-2" key={producto.id}>
             <img className="card-img-top" src={producto.foto}></img>
             <div className="card-body">
-            <h5 className="card-title">{producto.nombre}</h5>
+            <Link to={`/productos/${producto.id}`}><h5 className="card-title">{producto.nombre}</h5></Link>
             <span>x{producto.tamaño}</span>
             <p className="card-text">${producto.precio}</p>
-            {/* <button className="btn btn-dark compra">Comprar</button> */}
             <ItemCount/>
             </div>
           </div>
