@@ -188,3 +188,30 @@ export const getItems = () => {
         } , 2000)
     })
 }
+
+
+export const getItem = (itemId) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const newItem = items.find(item => item.id === itemId);
+            if (newItem) {
+                resolve(newItem);
+            } else {
+                reject("No se encontro el item");
+            }
+        }, 1000);
+    });
+};
+
+export const getItemCategory = (category) => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const itemsCategory = items.filter(item => item.categoria === category);
+            if (itemsCategory.length > 0) {
+                resolve(itemsCategory);
+            } else {
+                reject("No se encontraron elementos en la categoría");
+            }
+        }, 1000);
+    });
+};
