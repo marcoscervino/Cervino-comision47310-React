@@ -20,7 +20,6 @@ function App() {
       <ItemListContainer/>
       
       </main>
-      {/* 0:33:38 zoom after */}
     </>
   )
 }

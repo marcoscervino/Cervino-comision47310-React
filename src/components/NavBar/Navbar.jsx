@@ -26,12 +26,12 @@ export const NavBar = () => {
                 <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Nuestros productos
                 </a>
-                <ul class="dropdown-menu">
-                  <li> <Link to={`/category/cerveza`}><a className="dropdown-item"  href="#">Cervezas</a></Link> </li>
-                  <li><Link to={`/category/gaseosa`}><a className="dropdown-item"  href="#">Gaseosas</a></Link></li>
-                  <li><Link to={`/category/gin`}><a className="dropdown-item"  href="#">Gines</a></Link></li>
-                  <li><Link to={`/category/vodka`}><a className="dropdown-item"  href="#">Vodkas</a></Link></li>
-                  <li><Link to={`/category/vino`}><a className="dropdown-item"  href="#">Vinos</a></Link></li>
+                <ul className="dropdown-menu">
+                  <li> <Link to={`/category/cerveza`}><span className="dropdown-item"  href="#">Cervezas</span></Link> </li>
+                  <li><Link to={`/category/gaseosa`}><span className="dropdown-item"  href="#">Gaseosas</span></Link></li>
+                  <li><Link to={`/category/gin`}><span className="dropdown-item"  href="#">Gines</span></Link></li>
+                  <li><Link to={`/category/vodka`}><span className="dropdown-item"  href="#">Vodkas</span></Link></li>
+                  <li><Link to={`/category/vino`}><span className="dropdown-item"  href="#">Vinos</span></Link></li>
                 </ul>
               </li>
             </ul>

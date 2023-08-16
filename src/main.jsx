@@ -9,8 +9,11 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+  
   <React.StrictMode>
+    
     <BrowserRouter>
+
     <Routes>
       
       <Route path="/" element={<App/>}/>
@@ -25,9 +28,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <ItemDetailContainer/>
     </>} />
     </Routes>
+
     </BrowserRouter>
-
     
-
   </React.StrictMode>,
+  
 )

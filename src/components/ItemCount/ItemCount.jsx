@@ -1,7 +1,8 @@
 import { useState } from "react";
 
 export function ItemCount () {
-    let [count, setCount] = useState(0);
+    let [count, setCount] = useState(1);
+    const [cantProd, setCantProd] = useState(0);
 
     function handleClickSuma() {
         setCount(count + 1);
@@ -9,15 +10,19 @@ export function ItemCount () {
 
     
     function handleClickResta() {
-        if (count > 0) {
+        if (count > 1) {
         setCount(count - 1)
         }
         ;
     }
 
-    function handleClickCompra() {
-        setCount(count = 0);
+    function onAdd() {
+        setCantProd(count);
+        setCount(1);
+         // Agrega este código
+
     }
+    console.log(cantProd);
     return (
         <>
             <div className="d-flex justify-content-center ">
@@ -33,10 +38,11 @@ export function ItemCount () {
             </div>
 
             <div>
-                <button className="btn btn-dark compra" onClick={handleClickCompra}>Agregar al carrito</button>
+                <button className="btn btn-dark compra" onClick={onAdd}>Agregar al carrito</button>
             </div>
         </>
     );
+    
 
 }
 

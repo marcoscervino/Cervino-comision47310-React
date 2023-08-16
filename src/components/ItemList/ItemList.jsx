@@ -11,7 +11,7 @@ function ItemList({ itemArray = [] }){
       return(
         // id, foto, nombre, tamaño, precio
         
-        <Item
+        <Item key={items.id}
           id={items.id}
           foto={items.foto}
           nombre={items.nombre}
