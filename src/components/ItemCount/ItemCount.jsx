@@ -19,10 +19,8 @@ export function ItemCount () {
     function onAdd() {
         setCantProd(count);
         setCount(1);
-         // Agrega este código
 
     }
-    console.log(cantProd);
     return (
         <>
             <div className="d-flex justify-content-center ">
