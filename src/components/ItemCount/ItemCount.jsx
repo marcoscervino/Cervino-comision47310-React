@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { CartContext } from "../../context/cartContext";
 
-export function ItemCount () {
+export function ItemCount ({ item }) {
     const cartContext = useContext(CartContext);
     console.log({cartContext})
 
@@ -22,16 +22,15 @@ export function ItemCount () {
     }
 
     function onAdd() {
-        if (cantProd === 0){
-        setCantProd(count);
+        const newItem = {
+            id: item.id,
+            nombre: item.nombre,
+            tamaño: item.tamaño,
+            precio: item.precio,
+            cantidad: count,
+        };
+        cartContext.addItemToCart(newItem);
         setCount(1);
-
-        
-    }else{
-        setCantProd(cantProd + count);
-        setCount(1);
-    }
-    cartContext.changeItemCant(cantProd)
     }
     return (
         <>
