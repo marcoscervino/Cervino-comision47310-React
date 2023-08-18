@@ -1,6 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { CartContext } from "../../context/cartContext";
 
 export function ItemCount () {
+    const cartContext = useContext(CartContext);
+    console.log({cartContext})
+
+
     let [count, setCount] = useState(1);
     const [cantProd, setCantProd] = useState(0);
 
@@ -17,9 +22,16 @@ export function ItemCount () {
     }
 
     function onAdd() {
+        if (cantProd === 0){
         setCantProd(count);
         setCount(1);
 
+        
+    }else{
+        setCantProd(cantProd + count);
+        setCount(1);
+    }
+    cartContext.changeItemCant(cantProd)
     }
     return (
         <>

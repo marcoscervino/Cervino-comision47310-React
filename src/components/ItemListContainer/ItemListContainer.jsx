@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList";
 import { getItemCategory, getItems } from "../../asyncMock";
 import { useParams } from "react-router-dom";
+import Loader from "../Loader/Loader";
 
 function ItemListContainer(){
         const [isLoading, setIsLoading] = useState(true);
@@ -30,7 +31,7 @@ function ItemListContainer(){
         }, [category]); // Vuelve a ejecutar el efecto cuando cambie la categoría de la URL
 
         
-if (isLoading) return <p>cargando...</p>
+if (isLoading) return <Loader/>
         return(
                 <section className='row justify-content-center' >
                 <ItemList itemArray={items}/>

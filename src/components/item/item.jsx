@@ -10,7 +10,7 @@ function Item ({ id, foto, nombre, tamaño, precio }) {
             <Link to={`/item/${id}`}><h5 className="card-title">{nombre}</h5></Link>
             <span>x{tamaño}</span>
             <p className="card-text">${precio}</p>
-            <ItemCount/>
+            
             </div>
         </div>
     );

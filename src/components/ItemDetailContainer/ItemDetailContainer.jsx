@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { getItem } from "../../asyncMock";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
+import Loader from "../Loader/Loader";
 
 function ItemDetailContainer(){
     const [isLoading, setIsLoading] = useState(true);
@@ -19,7 +20,7 @@ useEffect(() => {
         .finally(() => setIsLoading(false));
 }, []);
 
-    if (isLoading) return <p>Cargando...</p>
+    if (isLoading) return <Loader/>
 
     return(
     //  id, foto, nombre, tamaño, precio  

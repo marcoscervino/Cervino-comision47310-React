@@ -199,7 +199,7 @@ export const getItem = (itemId) => {
             } else {
                 reject("No se encontro el item");
             }
-        }, 1000);
+        },2000);
     });
 };
 
@@ -212,6 +212,6 @@ export const getItemCategory = (category) => {
             } else {
                 reject("No se encontraron elementos en la categoría");
             }
-        }, 1000);
+        }, 2000);
     });
 };

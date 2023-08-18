@@ -6,13 +6,14 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx'
 import { NavBar } from './components/NavBar/Navbar.jsx'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer.jsx'
-import { CartContext } from './context/cartContext.js'
+import CartProvider, { CartContext } from './context/cartContext.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   
   <React.StrictMode>
-    <CartContext.Provider value={[]}>
+    {/* <CartContext.Provider value={[]}> */}
+      <CartProvider>
       <BrowserRouter>
 
         <Routes>
@@ -31,7 +32,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </Routes>
 
       </BrowserRouter>
-    </CartContext.Provider>
+    {/* </CartContext.Provider> */}
+    </CartProvider>
   </React.StrictMode>,
-  
+  //1:31:52 zoom clase 11
 )

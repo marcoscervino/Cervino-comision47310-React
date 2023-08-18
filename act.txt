@@ -1,0 +1,13 @@
+Descripcion de la actividad:
+
+Implementar ReactContext para mantener el estado de compra del user
+
+Recomendaciones o guia:
+
+- al clieckear comprar en el ItemDetail se debe guardar el producto y su cantidad en forma del objeto {nombre,precio,cantidad} dentro del array de productos agregados
+- Detalle importante: CartContext debe tener la logica incorporada de no aceptar duplicados y mantener su consistencia.
+- Metodos recomendados:
+	addItem (item,cantidad) //agregar cierta cantidad de un item al carrito
+	removeItem (itemId) // remover un item del cart usando el id del item
+	clear() // remover todos los items
+	isInCart(id) => true/false // para chequear si el item ya esta en el carro, en ese caso sumar la cantidad solicitada a la existente
