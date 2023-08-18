@@ -7,16 +7,29 @@ export function useCartContext() {
 }
 
 export function CartProvider({ children }) {
-    const [cartItems, setCartItems] = useState([]);
+    const [carro, setCarro] = useState([]);
 
     const addItemToCart = (item) => {
-        setCartItems([...cartItems, item]);
+        const isInCart = carro.findIndex((cartItem) => cartItem.id === item.id);
+
+        if (isInCart !== -1) {
+            // Si el item ya existe, actualizamos la cantidad del item existente
+            const actualizarItemsCarro = carro.map((cartItem, index) =>
+                index === isInCart
+                    ? { ...cartItem, cantidad: cartItem.cantidad + item.cantidad }
+                    : cartItem
+            );
+            setCarro(actualizarItemsCarro);
+        } else {
+            // Si el item no existe en el carrito, lo agregamos
+            setCarro([...carro, item]);
+        }
     };
     
     return (
         <CartContext.Provider
             value={{
-                cartItems,
+                cartItems: carro,
                 addItemToCart,
             }}
         >
