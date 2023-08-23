@@ -30,6 +30,11 @@ export function CartProvider({ children }) {
         const total = carro.reduce((total, item) => total + item.precio * item.cantidad, 0);
         return total;
     };
+
+    const removeItem = (itemId) => {
+        const actualizarCarro = carro.filter((item) => item.id !== itemId);
+        setCarro(actualizarCarro);
+    };
     
     return (
         <CartContext.Provider
@@ -37,6 +42,7 @@ export function CartProvider({ children }) {
                 cartItems: carro,
                 addItemToCart,
                 calcularTotalAPagar,
+                removeItem,
             }}
         >
             {children}
