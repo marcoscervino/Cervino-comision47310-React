@@ -2,6 +2,7 @@
 import { useContext } from "react";
 import cartLogo from "../../assets/icons/cart-regular.png";
 import { CartContext } from "../../context/cartContext";
+import { Link } from "react-router-dom";
 
 export const CartWidget = () => {
     const cartContext = useContext(CartContext);
@@ -11,9 +12,10 @@ export const CartWidget = () => {
     
     return(
         <>
-        <button className="btn btn-outline-secondary btncarro" id="verCarro">
+        <Link to="/cart"><button className="btn btn-outline-secondary btncarro" id="verCarro">
                 <img src={cartLogo} alt="" /> {totalItemCount}
             </button>
+        </Link>
         </>
     )
 }

@@ -7,6 +7,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer.
 import { NavBar } from './components/NavBar/Navbar.jsx'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer.jsx'
 import CartProvider, { CartContext } from './context/cartContext.jsx'
+import Cart from './components/routes/Cart.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -29,6 +30,12 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <NavBar />
             <ItemDetailContainer />
           </>} />
+
+          <Route path="/cart" element={<>
+          <NavBar />
+          <Cart/>
+          </>}
+          />
         </Routes>
 
       </BrowserRouter>

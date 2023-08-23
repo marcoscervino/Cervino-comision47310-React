@@ -25,12 +25,18 @@ export function CartProvider({ children }) {
             setCarro([...carro, item]);
         }
     };
+
+    const calcularTotalAPagar = () => {
+        const total = carro.reduce((total, item) => total + item.precio * item.cantidad, 0);
+        return total;
+    };
     
     return (
         <CartContext.Provider
             value={{
                 cartItems: carro,
                 addItemToCart,
+                calcularTotalAPagar,
             }}
         >
             {children}
