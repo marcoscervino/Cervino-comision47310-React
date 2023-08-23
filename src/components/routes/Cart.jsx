@@ -14,13 +14,6 @@ function Cart() {
         </div>
         </div>
         
-        <div className="container row">
-        <div className="container text-center col-lg">Producto:</div>
-        <div className="container text-center col-sm">Cantidad:</div>
-        <div className="container text-center col-sm">Precio por item</div>
-        <div className="container text-center col-sm">Total por producto</div>
-        <div className="container text-center col-sm">Eliminar</div>
-        </div>
             <ul>
                 {cartContext.cartItems.map((item) => (
                     <div key={item.id} className="container text-center row">
