@@ -33,7 +33,7 @@ function ItemListContainer(){
         
 if (isLoading) return <Loader/>
         return(
-                <section className='row justify-content-center' >
+                <section className='row justify-content-center bg-dark' >
                 <ItemList itemArray={items}/>
                 </section>
         )

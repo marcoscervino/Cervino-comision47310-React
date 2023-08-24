@@ -35,6 +35,11 @@ export function CartProvider({ children }) {
         const actualizarCarro = carro.filter((item) => item.id !== itemId);
         setCarro(actualizarCarro);
     };
+
+    const finalizarCompra = () => {
+        // Realiza las operaciones necesarias al finalizar la compra
+        setCarro([]);
+    };
     
     return (
         <CartContext.Provider
@@ -43,6 +48,7 @@ export function CartProvider({ children }) {
                 addItemToCart,
                 calcularTotalAPagar,
                 removeItem,
+                finalizarCompra,
             }}
         >
             {children}

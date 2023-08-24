@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
-import { ItemCount } from "../ItemCount/ItemCount";
 
 function Item ({ id, foto, nombre, tamaño, precio }) {
     
     return (
         <div className="card mt-3 mb-3 ms-2 mx-2 border-dark text-center col-md-2" key={id}>
-            <img className="card-img-top" src={foto}></img>
+            <Link to={`/item/${id}`}><img className="card-img-top" src={foto}></img></Link>
             <div className="card-body">
             <Link to={`/item/${id}`}><h5 className="card-title">{nombre}</h5></Link>
             <span>x{tamaño}</span>

@@ -185,7 +185,7 @@ export const getItems = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() =>{
             resolve(items)
-        } , 2000)
+        } , 500)
     })
 }
 
@@ -199,7 +199,7 @@ export const getItem = (itemId) => {
             } else {
                 reject("No se encontro el item");
             }
-        },2000);
+        },500);
     });
 };
 
@@ -212,6 +212,6 @@ export const getItemCategory = (category) => {
             } else {
                 reject("No se encontraron elementos en la categoría");
             }
-        }, 2000);
+        }, 500);
     });
 };

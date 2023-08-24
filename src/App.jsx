@@ -9,6 +9,7 @@ import './components/PromosMsj/PromosMsj.jsx'
 import { NavBar } from './components/NavBar/Navbar.jsx'
 import { PromosMsj } from './components/PromosMsj/PromosMsj.jsx'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import Footer from './components/footer/Footer'
 function App() {
 
   return (
@@ -16,10 +17,9 @@ function App() {
       <NavBar/>
       <main>
       <PromosMsj/>
-      
       <ItemListContainer/>
-      
       </main>
+      <Footer/>
     </>
   )
 }

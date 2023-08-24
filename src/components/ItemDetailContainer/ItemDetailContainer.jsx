@@ -25,7 +25,7 @@ useEffect(() => {
     return(
     //  id, foto, nombre, tamaño, precio  
         <>
-        <section className='row justify-content-center' >
+        <section className='row justify-content-center bg-dark' >
         <ItemDetail
         id={item.id}
         foto={item.foto}
