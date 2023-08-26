@@ -8,6 +8,7 @@ export function useCartContext() {
 
 export function CartProvider({ children }) {
     const [carro, setCarro] = useState([]);
+    const [order, setOrder] = useState({})
 
     const addItemToCart = (item) => {
         const isInCart = carro.findIndex((cartItem) => cartItem.id === item.id);
@@ -40,6 +41,24 @@ export function CartProvider({ children }) {
         // Realiza las operaciones necesarias al finalizar la compra
         setCarro([]);
     };
+
+    const purchaseCart = (cartinfo) =>{
+        const auxOrder = {
+            buyer: {
+                email: "",
+                name: "",
+                phone: ""
+            }, 
+            items: [{
+                id: 1,
+                price: 350,
+                title: ""
+            },
+        ],
+        total: 350,
+        };
+        
+    }
     
     return (
         <CartContext.Provider
