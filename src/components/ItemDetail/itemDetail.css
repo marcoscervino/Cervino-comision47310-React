@@ -1,0 +1,21 @@
+.detail-container h5{
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    font-size: 1.4rem;
+    
+}
+
+.detail-container h6{
+    font-size: 1.2rem;
+    font-weight:400;
+    padding-bottom:2rem;
+    
+    padding-top: 2rem;
+    
+}
+
+.detail-container p{
+    font-size: 1.6rem;
+    
+    font-weight: bold;
+}

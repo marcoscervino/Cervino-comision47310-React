@@ -78,9 +78,11 @@ function Cart() {
                 </div>
 
                 <div className='d-flex flex-column text-center'>
-                <span className='mt-3'>El total a pagar del carro es: ${cartContext.calcularTotalAPagar()}</span>
+                <span className='mt-4 mb-4'>El total a pagar del carro es: ${cartContext.calcularTotalAPagar()}</span>
+                <div className='p-1 bg-dark'></div>
+                <FormCompra/>   
                 <button className='mx-5 mt-3 mb-3' onClick={cartContext.finalizarCompra}>Finalizar compra</button>        
-                <FormCompra/>        
+                
                 </div>                
             </>
         )

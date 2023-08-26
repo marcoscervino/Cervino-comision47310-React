@@ -1,18 +1,26 @@
 import { ItemCount } from "../ItemCount/ItemCount";
+import './itemDetail.css'
 
 
 function ItemDetail (props) {
-    const { id, foto, nombre, tamaño, precio } = props; 
+    const { id, foto, nombre, tamaño, precio, descripcion } = props; 
     return (
-        <div className="card mt-3 mb-3 ms-2 mx-2 border-dark text-center col-md-2" key={id}>
+        <>
+        <div className="card mt-3 mb-3 ms-2 mx-2 border-dark text-center col-md-4" key={id}>
+            
             <img className="card-img-top" src={foto} alt={nombre} />
-            <div className="card-body">
-                <h5 className="card-title">{nombre}</h5>
-                <span>x{tamaño}</span>
-                <p className="card-text">${precio}</p>
-                <ItemCount item={{ id, nombre, tamaño, precio }} />
-            </div>
+            
+            
         </div>
+
+        <div className="bg-white mt-3 mb-3 ms-2 mx-2 border-dark text-center card col-md-2 detail-container">
+        <h5 className="">{nombre} x{tamaño}</h5>
+        <h6>{descripcion}</h6>
+        <p className="">${precio}</p>
+        <br />
+        <ItemCount item={{ id, nombre, tamaño, precio }} />
+        </div>
+        </>
     );
 }
 

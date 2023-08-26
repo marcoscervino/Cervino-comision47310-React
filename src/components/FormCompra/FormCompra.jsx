@@ -1,5 +1,5 @@
 import { Field, Form, Formik, ErrorMessage } from "formik";
-
+import './formCompra.css'
 
 
 function FormCompra(){
@@ -23,14 +23,20 @@ function FormCompra(){
             onSubmit={ guardarDatos }
             validate={ validar }
             >
-
+                <div className="form-container">
                 <Form>
-                    <Field name="name" type="text"/>
-                    <Field name= "email" type="email"/>
-                    <Field name= "phone" type="text"/>
+                    <div className="d-inline-flex p-2 row">
+                    
+                    <Field name="name" type="text" placeholder="Ingresa tu nombre y apellido"/>
+                    
+                    <Field name= "email" type="email" placeholder="Ingresa tu email"/>
+                    
+                    <Field name= "phone" type="text"  placeholder="Ingresa tu telefono de contacto"/>
                     <ErrorMessage name="name"/>
                     <button type="submit">Guardar datos</button>
+                    </div>
                 </Form>
+                </div>
 
             </Formik>
         </>

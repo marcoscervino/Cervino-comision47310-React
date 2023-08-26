@@ -32,6 +32,7 @@ useEffect(() => {
         nombre={item.nombre}
         tamaño={item.tamaño}
         precio={item.precio}
+        descripcion={item.descripcion}
         />
         </section>
         </>
