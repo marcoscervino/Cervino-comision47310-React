@@ -8,7 +8,7 @@ function ItemDetail (props) {
         <>
         <div className="card mt-3 mb-3 ms-2 mx-2 border-dark text-center col-md-4" key={id}>
             
-            <img className="card-img-top" src={foto} alt={nombre} />
+            <img className="card-img-top mt-5" src={foto} alt={nombre} />
             
             
         </div>

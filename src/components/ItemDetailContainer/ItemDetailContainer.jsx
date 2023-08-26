@@ -3,19 +3,26 @@ import { getItem } from "../../asyncMock";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import Loader from "../Loader/Loader";
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../../firebase/config";
+
 
 function ItemDetailContainer(){
     const [isLoading, setIsLoading] = useState(true);
     const [item, setItem] = useState([]);
     const Params = useParams();
-const itemId = parseInt(Params.id, 10); // Convierte la cadena a número
+const itemId = Params.id; // Convierte la cadena a número
 
 useEffect(() => {
-    getItem(itemId)
-        .then(result => {
-            console.log(result);
-            setItem(result);
-        })
+
+    const docRef = doc(db, "productos", itemId);
+    getDoc(docRef).then((resp) => {
+        setItem(
+            {...resp.data(), id: resp.id}
+        );
+    })
+    
+        
         .catch(error => console.log(error))
         .finally(() => setIsLoading(false));
 }, []);

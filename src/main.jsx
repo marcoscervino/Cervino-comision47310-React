@@ -45,8 +45,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         </Routes>
 
       </BrowserRouter>
-    {/* </CartContext.Provider> */}
     </CartProvider>
   </React.StrictMode>,
-  //1:31:52 zoom clase 11
 )

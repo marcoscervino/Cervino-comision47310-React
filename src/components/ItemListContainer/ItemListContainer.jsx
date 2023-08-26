@@ -1,33 +1,32 @@
 import { useEffect, useState } from "react";
 import ItemList from "../ItemList/ItemList";
-import { getItemCategory, getItems } from "../../asyncMock";
 import { useParams } from "react-router-dom";
 import Loader from "../Loader/Loader";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { db } from "../../firebase/config";
 
 function ItemListContainer(){
         const [isLoading, setIsLoading] = useState(true);
         const [items, setItems] = useState([]);
-        const { category } = useParams(); // Obtener la categoría de la URL
+        const category = useParams().category; // Obtener la categoría de la URL
 
 
         useEffect(() => {
-                if (category) {
-                        getItemCategory(category) // Llama a getItemCategory si hay una categoría en la URL
-                                .then(response => {
-                                        console.log(response);
-                                        setItems(response);
-                                })
-                                .catch(error => console.error(error))
-                                .finally(() => setIsLoading(false));
-                } else {
-                        getItems() // Llama a getItems si no hay categoría en la URL
-                                .then(response => {
-                                        console.log(response);
-                                        setItems(response);
-                                })
-                                .catch(error => console.error(error))
-                                .finally(() => setIsLoading(false));
-                }
+
+                const productosRef = collection(db, "productos");
+
+                const consultaCategoria = category ? (query(productosRef, where("categoria", "==", category))) : productosRef;
+
+                getDocs(consultaCategoria)
+                        .then((resp) => {
+                                setItems(
+                                        resp.docs.map((doc) => {
+                                                return { ...doc.data(), id: doc.id }
+                                        })
+                                )
+                        }).catch(error => console.error(error))
+                        .finally(() => setIsLoading(false));
+                
         }, [category]); // Vuelve a ejecutar el efecto cuando cambie la categoría de la URL
 
         

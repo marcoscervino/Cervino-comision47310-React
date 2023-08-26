@@ -24,16 +24,22 @@ function FormCompra(){
             validate={ validar }
             >
                 <div className="form-container">
+                <p className="mt-4 mb-2">Para finalizar tu compra, por favor completa los siguientes datos</p>
+                
                 <Form>
+                    
                     <div className="d-inline-flex p-2 row">
                     
-                    <Field name="name" type="text" placeholder="Ingresa tu nombre y apellido"/>
+                    <Field className="mb-2" name="name" type="text" placeholder="Ingresa tu nombre y apellido"/>
                     
-                    <Field name= "email" type="email" placeholder="Ingresa tu email"/>
+                    <Field className= "mb-2" name= "email" type="email" placeholder="Ingresa tu email"/>
                     
-                    <Field name= "phone" type="text"  placeholder="Ingresa tu telefono de contacto"/>
-                    <ErrorMessage name="name"/>
+                    <Field className="mb-2" name= "phone" type="text"  placeholder="Ingresa tu telefono de contacto"/>
+                    
                     <button type="submit">Guardar datos</button>
+                    </div>
+                    <div className="d-flex justify-content-center">
+                    <p className="error-form text-center"><ErrorMessage name="name"/></p>
                     </div>
                 </Form>
                 </div>
