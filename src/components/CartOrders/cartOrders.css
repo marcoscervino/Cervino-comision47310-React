@@ -1,0 +1,10 @@
+.error-form{
+    width: 370px !important;
+    color: red;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.form-container p{
+    font-weight: bold;
+}

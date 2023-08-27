@@ -11,6 +11,7 @@ import Cart from './components/routes/Cart.jsx'
 import './components/routes/cart.css'
 import './components/Footer/footer.css'
 import Footer from './components/footer/Footer.jsx'
+import CartOrders from './components/CartOrders/CartOrders.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -41,6 +42,15 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Cart/>
           <Footer/>
           </>}
+          />
+
+          <Route path="/checkout" element={<>
+          <NavBar />
+          <CartOrders/>
+          <Footer/>
+          </>}
+
+          
           />
         </Routes>
 
