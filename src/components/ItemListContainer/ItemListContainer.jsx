@@ -8,6 +8,7 @@ import { db } from "../../firebase/config";
 function ItemListContainer(){
         const [isLoading, setIsLoading] = useState(true);
         const [items, setItems] = useState([]);
+        const [searchTerm, setSearchTerm] = useState(""); // Nuevo estado para el término de búsqueda
         const category = useParams().category; // Obtener la categoría de la URL
 
 
@@ -31,11 +32,29 @@ function ItemListContainer(){
 
         
 if (isLoading) return <Loader/>
+
+const filteredItems = items.filter(item =>
+        item.nombre.toLowerCase().includes(searchTerm.toLowerCase())
+    );
         return(
-                <section className='row justify-content-center bg-dark' >
-                <ItemList itemArray={items}/>
+                <section className='row justify-content-center bg-dark mx-0'>
+                    <form className="d-flex">
+                        <input
+                            className="form-control mx-5 mt-3"
+                            id="filtroNombre"
+                            type="search"
+                            placeholder="Buscar"
+                            aria-label="Search"
+                            onChange={e => setSearchTerm(e.target.value)} // Actualizar el término de búsqueda
+                            value={searchTerm}
+                        />
+                        
+                    </form>
+                    <ItemList itemArray={filteredItems} />
                 </section>
-        )
+            );
+
+
 }
 
 export default ItemListContainer;

@@ -1,5 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100);
 
+.cart-title span{
+  color: #EBEBEB;
+}
+
+.cart-title div h1 {
+  color:#EBEBEB;
+}
+
 div.table-title {
    display: block;
   margin: auto;
@@ -117,4 +125,35 @@ td.text-center {
 
 td.text-right {
   text-align: right;
+}
+
+
+@media (max-width:629px) {
+  .table-head {
+  color:#D5DDE5 !important;
+  background:#1b1e24 !important;
+  border-bottom:4px solid #9ea7af !important;
+  border-right: 1px solid #343a45 !important;
+  font-size:16px;
+  font-weight: 100;
+  padding:4px !important;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+}
+
+td {
+  background:#FFFFFF;
+  padding:20px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:16px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+
+.imgcart{
+  width: 100%;
+}
 }

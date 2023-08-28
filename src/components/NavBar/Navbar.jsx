@@ -1,5 +1,4 @@
 import mainLogo from '../../assets/logo/best-bar-logo.png';
-import searchIcon from '../../assets/icons/search-icon.png';
 import { CartWidget } from "../CartWidget/CartWidget.jsx";
 import { Link, useParams } from "react-router-dom";
 
@@ -35,10 +34,7 @@ export const NavBar = () => {
                 </ul>
               </li>
             </ul>
-            <form className="d-flex" role="search">
-              <input className="form-control me-2" id="filtroNombre" type="search" placeholder="Buscar" aria-label="Search"/>
-              <button className="btn btn-outline-secondary btnBuscar" id="botonNombre" type="submit"><img src={searchIcon} alt=""/></button>
-            </form>
+          
             <CartWidget/>
           </div>
         </div>

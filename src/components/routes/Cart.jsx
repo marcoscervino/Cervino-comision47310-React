@@ -2,7 +2,6 @@ import emptycart from '../../assets/cart/empty-cart-dark-small.png'
 import { useContext } from "react";
 import { CartContext } from "../../context/cartContext";
 import { Link } from 'react-router-dom';
-import FormCompra from '../FormCompra/FormCompra';
 
 
 
@@ -26,12 +25,13 @@ function Cart() {
 
 
             <>
-
-                <div className="container text-center col-lg mt-3">
+                <div className='bg-dark mb-5 pt-1 mt-0 container-fluid'>
+                <div className="container text-center col-lg mt-3 cart-title">
                     <span>Total de items en el carro: {totalItemCount}</span>
                     <div className="container text-center col-lg table-title">
-                        <h2>Carrito de Compras</h2>
+                        <h1>Carrito de Compras</h1>
                     </div>
+                </div>
                 </div>
 
                 <div className="px-5 ">
@@ -78,9 +78,9 @@ function Cart() {
                 </div>
 
                 <div className='d-flex flex-column text-center'>
-                <span className='mt-4 mb-4'>El total a pagar del carro es: ${cartContext.calcularTotalAPagar()}</span>
+                <h4 className='mt-4 mb-4'>El total a pagar del carro es: ${cartContext.calcularTotalAPagar()}</h4>
                 <div className='p-1 bg-dark'></div>
-                <Link to="/checkout"><button className='mx-5 mt-3 mb-3'>Finalizar compra</button></Link> 
+                <div className='bg-dark'><Link to="/checkout"><button className='mx-5 mt-3 mb-3'>Finalizar compra</button></Link> </div>
                 
                 </div>                
             </>
