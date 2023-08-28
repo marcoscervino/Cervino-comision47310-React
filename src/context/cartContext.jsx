@@ -42,23 +42,6 @@ export function CartProvider({ children }) {
         setCarro([]);
     };
 
-    const purchaseCart = (cartinfo) =>{
-        const auxOrder = {
-            buyer: {
-                email: "",
-                name: "",
-                phone: ""
-            }, 
-            items: [{
-                id: 1,
-                price: 350,
-                title: ""
-            },
-        ],
-        total: 350,
-        };
-        
-    }
     
     return (
         <CartContext.Provider

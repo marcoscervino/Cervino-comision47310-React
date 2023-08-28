@@ -16,6 +16,7 @@ function CartOrders () {
                 buyer: values, 
                 items: cartItems,
                 total: calcularTotalAPagar(),
+                date: Date.now()
             };
         console.log(pedido);
 
