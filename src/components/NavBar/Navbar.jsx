@@ -19,7 +19,7 @@ export const NavBar = () => {
                 <Link to="/"><span className="nav-link " aria-current="page" href="./index.html">Inicio</span></Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="./pages/nosotros.html">Nosotros</a>
+                <Link to="/nosotros"><span className="nav-link" href="./pages/nosotros.html">Nosotros</span></Link>
               </li>
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

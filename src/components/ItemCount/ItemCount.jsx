@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
 import { CartContext } from "../../context/cartContext";
+import toast, { Toaster } from 'react-hot-toast';
 
 export function ItemCount ({ item }) {
     const cartContext = useContext(CartContext);
-    console.log({cartContext})
 
 
     let [count, setCount] = useState(1);
@@ -32,6 +32,10 @@ export function ItemCount ({ item }) {
         cartContext.addItemToCart(newItem);
         setCount(1);
     }
+
+    const notify = () => toast(`Agregaste al carrito: ${count} ${item.nombre}`)
+
+
     return (
         <>
             <div className="d-flex justify-content-center ">
@@ -47,7 +51,16 @@ export function ItemCount ({ item }) {
             </div>
 
             <div>
-                <button className="btn btn-dark compra mb-3" onClick={onAdd}>Agregar al carrito</button>
+                <button className="btn btn-dark compra mb-3" onClick={() => { onAdd(); notify(); }}>Agregar al carrito</button>
+                <Toaster
+                    toastOptions={{
+                        className: '',
+                        style: {
+                            border: '1px solid #717171',
+                            color: '#6e142c',
+                        },
+                    }}
+                />
             </div>
         </>
     );

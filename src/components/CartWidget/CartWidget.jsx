@@ -1,4 +1,3 @@
-
 import { useContext } from "react";
 import cartLogo from "../../assets/icons/cart-regular.png";
 import { CartContext } from "../../context/cartContext";

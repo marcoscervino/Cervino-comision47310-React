@@ -2,6 +2,7 @@ import emptycart from '../../assets/cart/empty-cart-dark-small.png'
 import { useContext } from "react";
 import { CartContext } from "../../context/cartContext";
 import { Link } from 'react-router-dom';
+import logo from '../../assets/logo/bestbarlogoxl2.png'
 
 
 
@@ -25,6 +26,9 @@ function Cart() {
 
 
             <>
+                <div className="d-flex justify-content-center container-fluid bg-dark p-2 pedido-confirm">
+                <img src={logo} alt="" />
+                </div>
                 <div className='bg-dark mb-5 pt-1 mt-0 container-fluid'>
                 <div className="container text-center col-lg mt-3 cart-title">
                     <span>Total de items en el carro: {totalItemCount}</span>
@@ -56,10 +60,12 @@ function Cart() {
 
                                     <td>
                                         <p>{item.cantidad}</p>
+                                        
                                     </td>
 
                                     <td>
-                                        <p> ${item.precio}</p>
+                                        <p> ${item.precio}</p> 
+                                        
                                     </td>
 
                                     <td>

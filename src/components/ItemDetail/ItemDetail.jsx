@@ -12,7 +12,7 @@ function ItemDetail (props) {
             
             
         </div>
-
+        
         <div className="bg-white mt-3 mb-3 ms-2 mx-2 border-dark text-center card col-md-2 detail-container">
         <h5 className="">{nombre} x{tamaño}</h5>
         <h6>{descripcion}</h6>

@@ -12,6 +12,7 @@ import './components/routes/cart.css'
 import './components/Footer/footer.css'
 import Footer from './components/footer/Footer.jsx'
 import CartOrders from './components/CartOrders/CartOrders.jsx'
+import Nosotros from './components/Nosotros/Nosotros.jsx'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -49,8 +50,13 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <CartOrders/>
           <Footer/>
           </>}
+          />
 
-          
+          <Route path="/nosotros" element={<>
+          <NavBar />
+          <Nosotros/>
+          <Footer/>
+          </>}
           />
         </Routes>
 

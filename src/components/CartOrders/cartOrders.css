@@ -9,10 +9,22 @@
     font-weight: bold;
 }
 
+
 .pedido-confirm h3{
     color: aliceblue;
 }
 
 .pedido-confirm p{
     color: aliceblue;
+    padding-bottom: 10rem;
+}
+
+.input-order{
+    height: 2.5rem;
+    border-radius: 5px;
+    border-style: none;
+}
+
+.order-logo{
+    height: 350px;
 }

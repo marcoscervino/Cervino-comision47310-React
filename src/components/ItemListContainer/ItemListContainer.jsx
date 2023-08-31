@@ -28,7 +28,7 @@ function ItemListContainer(){
                         }).catch(error => console.error(error))
                         .finally(() => setIsLoading(false));
                 
-        }, [category]); // Vuelve a ejecutar el efecto cuando cambie la categoría de la URL
+        }, [category]); 
 
         
 if (isLoading) return <Loader/>
@@ -45,7 +45,7 @@ const filteredItems = items.filter(item =>
                             type="search"
                             placeholder="Buscar"
                             aria-label="Search"
-                            onChange={e => setSearchTerm(e.target.value)} // Actualizar el término de búsqueda
+                            onChange={e => setSearchTerm(e.target.value)}
                             value={searchTerm}
                         />
                         

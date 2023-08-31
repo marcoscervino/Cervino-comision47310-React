@@ -3,7 +3,7 @@ import { useContext, useState } from "react";
 import { CartContext } from "../../context/cartContext";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebase/config";
-import logo from "../../assets/logo/bestbarlogoxl.png"
+import logo from "../../assets/logo/bestbarlogoxl2.png"
 import './cartOrders.css'
 
 
@@ -20,7 +20,6 @@ function CartOrders () {
                 total: calcularTotalAPagar(),
                 date: Date.now()
             };
-        console.log(pedido);
 
         const pedidosRef = collection(db, "orders");
         addDoc(pedidosRef, pedido)
@@ -36,7 +35,7 @@ function CartOrders () {
             <div className="d-flex justify-content-center container-fluid bg-dark p-2 pedido-confirm">
             <img src={logo} alt="" />
             </div>
-            <div className="container-fluid bg-dark p-2 d-flex flex-column align-items-center pedido-confirm ">
+            <div className="container-fluid bg-dark p-2 d-flex flex-column align-items-center pedido-confirm">
                 <h3>Gracias por tu pedido! ❤</h3>
                 <p>El ID de tu pedido es: {pedidoId}</p>
             </div>
@@ -54,7 +53,7 @@ function CartOrders () {
     return (
         <>
 
-        <div className="bg-dark d-flex justify-content-center">
+        <div className="bg-dark d-flex justify-content-center order-logo">
             <img src={logo} alt="" />
         </div>
 
@@ -73,11 +72,11 @@ function CartOrders () {
                 
                 <div className="d-inline-flex p-2 row">
                 
-                <Field className="mb-3" name="name" type="text" placeholder="Ingresa tu nombre y apellido"/>
+                <Field className="mb-3 input-order" name="name" type="text" placeholder="Ingresa tu nombre y apellido"/>
                 
-                <Field className= "mb-3" name= "email" type="email" placeholder="Ingresa tu email"/>
+                <Field className= "mb-3 input-order" name= "email" type="email" placeholder="Ingresa tu email"/>
                 
-                <Field className="mb-3" name= "phone" type="text"  placeholder="Ingresa tu telefono de contacto"/>
+                <Field className="mb-3 input-order" name= "phone" type="text"  placeholder="Ingresa tu telefono de contacto"/>
                 
                 <button type="submit">Finalizar Compra</button>
                 </div>
