@@ -17,12 +17,24 @@ El proyecto consiste en un ecommerce para un emprendimiento de venta de bebidas,
 ### "/checkout" 
 - solicitud de datos para generar la orden de pedido y enviarla a la base de datos
 
-## Capturas
 ## Librerias 
 - Hot-toast
 - Firebase 
 - Bootstrap
 
-## Deploy
+## Capturas
+Inicio
+![inicio](https://i.postimg.cc/pX76s21d/bestbar1.png)
 
-## GIF muestra
+Detail
+![cart](https://i.postimg.cc/Gtg5wrLq/bestbardetail.png)
+
+Cart
+![cart](https://i.postimg.cc/dQ5XTR2r/bestbarcart.png)
+
+Checkout
+![checkout](https://i.postimg.cc/fTkP73CF/bestbarcheckout.png)
+
+## Deploy
+- https://best-bar.netlify.app/
+

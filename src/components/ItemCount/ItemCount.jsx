@@ -57,7 +57,7 @@ export function ItemCount ({ item }) {
                         className: '',
                         style: {
                             border: '1px solid #717171',
-                            color: '#6e142c',
+                            color: '#027a07',
                         },
                     }}
                 />
