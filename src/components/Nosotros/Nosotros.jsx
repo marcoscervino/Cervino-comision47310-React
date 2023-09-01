@@ -30,7 +30,7 @@ function Nosotros () {
             <div className="card bg-dark text-white">
               <div className="card-body">
                 <h2 className="card-title">¿Buscas promos?</h2>
-                <p className="card-text">Aquí podrás encontrar las mejores bebidas, con las mejores promociones. En nuestra tienda de bebidas, te ofrecemos una selección excepcional de productos de alta calidad que satisfarán tu paladar exigente. Desde vinos finos y destilados premium hasta cervezas artesanales, contamos con una amplia variedad para satisfacer todos los gustos. Además, para que disfrutes al máximo de nuestras bebidas, te brindamos las mejores promociones y descuentos</p>
+                <p className="card-text">Aquí podrás encontrar las mejores bebidas, con las mejores promociones. En nuestra tienda de bebidas, te ofrecemos una selección excepcional de productos de alta calidad que satisfarán tu paladar exigente. Desde vinos finos y destilados premium hasta cervezas artesanales, contamos con una amplia variedad para complacer todos los gustos. Además, para que disfrutes al máximo de nuestras bebidas, te brindamos las mejores promociones y descuentos</p>
                 <p>¡Veni a conocernos!</p>
               </div>
             </div>

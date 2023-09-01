@@ -8,13 +8,21 @@ export const CartWidget = () => {
 
     const totalItemCount = cartContext.cartItems.reduce((total, item) => total + item.cantidad, 0);
 
+    if(totalItemCount == 0){
+        return(
+            <>
+            
+            </>
+        )
+    }else{
+        return(
+            <>
+            <Link to="/cart"><button className="btn btn-outline-secondary btncarro" id="verCarro">
+                    <img src={cartLogo} alt="" /> <span className="itemcount">{totalItemCount}</span>
+                </button>
+            </Link>
+            </>
+        )
+    }
     
-    return(
-        <>
-        <Link to="/cart"><button className="btn btn-outline-secondary btncarro" id="verCarro">
-                <img src={cartLogo} alt="" /> {totalItemCount}
-            </button>
-        </Link>
-        </>
-    )
 }

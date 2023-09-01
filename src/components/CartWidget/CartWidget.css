@@ -1,6 +1,8 @@
 .btncarro{
     color: rgb(25, 126, 0);
     font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .btn-cart{
@@ -9,5 +11,15 @@
     color: antiquewhite;
     padding: 10px;
     margin-top: 1rem;
+    
 
+}
+
+.itemcount{
+    background-color: rgb(1, 126, 17);
+    border-radius: 20px;
+    padding: 3px;
+    padding-right: 8px;
+    padding-left: 8px;
+    color: black;
 }
